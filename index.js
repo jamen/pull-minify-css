@@ -12,7 +12,6 @@ function minify (options) {
   return pull(
     filter(file => extname(file.path) === '.css'),
     replace('data', _ => buffer(options))
-
   )
 }
 
