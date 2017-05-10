@@ -37,7 +37,7 @@ Minifies [streamed files](https://github.com/jamen/pull-files). See [`csso`'s op
 
 ```js
 pull(
-  read([ 'index.js', 'foo.js' ], { cwd: __dirname }),
+  read([ 'index.css', 'foo.css' ], { cwd: __dirname }),
   minify({ ...options }),
   write(__dirname + '/out', err => {
     // done
