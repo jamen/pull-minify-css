@@ -1,7 +1,6 @@
 
 const csso = require('csso')
-const pull = require('pull-stream')
-const { filter, map, through } = pull
+const { pull, filter, map } = require('pull-stream')
 const replace = require('pull-prop')
 const { extname } = require('path')
 

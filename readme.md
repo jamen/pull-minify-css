@@ -11,7 +11,7 @@ const { read, write } = require('pull-files')
 const minify = require('pull-minify-css')
 
 pull(
-  read(__dirname + 'src/css/**/*.css'),
+  read(__dirname + '/src/css/**/*.css'),
   minify({ restructure: true }),
   write(__dirname + '/out/css', err => {
     // done
