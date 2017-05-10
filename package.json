@@ -1,0 +1,24 @@
+{
+  "name": "pull-minify-css",
+  "description": "Minify CSS files or buffers inside a pull-stream",
+  "version": "0.0.0",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "main": "index.js",
+  "repository": "jamen/pull-minify-css",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "jamen",
+    "pull-minify-css"
+  ],
+  "devDependencies": {
+    "pull-files": "^1.1.0",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "csso": "^3.1.1",
+    "pull-prop": "^0.3.0",
+    "pull-stream": "^3.5.1"
+  }
+}
