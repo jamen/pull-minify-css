@@ -45,7 +45,7 @@ pull(
 )
 ```
 
-#### `minify.buffer(options?)`
+### `minify.buffer(options?)`
 
 Minifies buffers instead of files.  Options the same
 
@@ -57,7 +57,7 @@ pull(
 )
 ```
 
-### Also see
+## Also see
 
  - [`pull-files`](https://github.com/jamen/pull-files) for reading and writing files
  - [`pull-minify-js`](https://github.com/jamen/pull-minify-js) for minifying JS
