@@ -1,6 +1,6 @@
 
 const csso = require('csso')
-const { pull, filter, map } = require('pull-stream')
+const { pull, map } = require('pull-stream')
 const replace = require('pull-prop')
 const { extname } = require('path')
 
@@ -8,9 +8,19 @@ module.exports = minify
 minify.buffer = buffer
 
 function minify (options) {
+  if (!options) options = {}
+
+  const strict = options.strict !== undefined ? options.strict : true
+
   // Minify `file.data` using the buffer stream
   return pull(
-    filter(file => extname(file.path) === '.css'),
+    map(file => {
+      if (!strict || extname(file.path) === '.css') {
+        return file
+      } else {
+        throw new Error(`Can only minify CSS files (got ${file.path})`)
+      }
+    }),
     replace('data', _ => buffer(options))
   )
 }

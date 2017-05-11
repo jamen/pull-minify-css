@@ -45,6 +45,12 @@ pull(
 )
 ```
 
+You can disable errors for non-CSS files by doing:
+
+```js
+minify({ strict: false, ...options })
+```
+
 ### `minify.buffer(options?)`
 
 Minifies buffers instead of files.  Options the same
